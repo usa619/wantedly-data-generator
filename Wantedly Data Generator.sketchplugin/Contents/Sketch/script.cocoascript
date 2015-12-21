@@ -1,0 +1,17 @@
+@import "library.cocoascript";
+
+var onRun = function(context) {
+  var selection = context.selection
+
+  for (var i = 0, l = [selection count]; i < l; i++) {
+    var layer = selection[i];
+    var color = MSColor.colorWithRed_green_blue_alpha(1.0,0.4,0.0,1.0);
+
+    layer.fontSize = 24;
+    layer.textColor = color;
+    [layer setFont:[NSFont fontWithName:@"YuGothic" size:24]];
+    [layer setStringValue: string_value];
+
+    layer.stringValue = "日本語です";
+  }
+};

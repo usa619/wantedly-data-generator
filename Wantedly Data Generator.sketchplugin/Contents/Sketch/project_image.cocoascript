@@ -1,0 +1,39 @@
+@import "library.cocoascript";
+
+var onRun = function(context) {
+  var selection = context.selection
+  var data_path = 'data/project/image/';
+  var fileManager = [NSFileManager defaultManager];
+
+  var script_path = context.scriptPath;
+  var plugin_folder = script_path.match(/Plugins\/([\w -])*/)[0] + "/";
+  var sketch_plugins_path = script_path.replace(/Plugins\/([\w -])*\/([\w -])*.sketchplugin(.*)/, "");
+  var images_path =  sketch_plugins_path + plugin_folder + data_path;
+
+  var imagesFileNames = [fileManager contentsOfDirectoryAtPath:images_path error:nil];
+  var imageCount = [imagesFileNames count] - 1;
+
+  var selected_paths = [];
+
+  for(var i = 1; i < 100; i++){
+    var index = Math.floor(Math.random() * imageCount);
+    index = index >= imageCount ? 0 : index + 1;
+    var file_name = imagesFileNames[index];
+    var file_path = images_path + file_name;
+    selected_paths.push(file_path);
+  }
+
+  for(var i = 0; i < [selection count]; i++){
+    var layer = selection[i];
+    log(selected_paths[i]);
+    var image = [[NSImage alloc] initWithContentsOfFile:selected_paths[i]];
+
+    if([layer class] == MSShapeGroup){
+      var fill = layer.style().fills().firstObject();
+      fill.setFillType(4);
+      var coll = layer.style().fills().firstObject().documentData().images();
+      [fill setPatternImage:image collection:coll]
+      layer.style().fills().firstObject().setPatternFillType(1);
+    }
+  }
+};

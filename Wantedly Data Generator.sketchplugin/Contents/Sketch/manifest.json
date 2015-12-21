@@ -1,0 +1,72 @@
+{
+  "author" : "matsuhisa.hironobu",
+  "commands" : [
+    {
+      "script" : "company_name.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "Company.name",
+      "identifier" : "script1"
+    },
+    {
+      "script" : "user_name.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "User.name",
+      "identifier" : "script2"
+    },
+    {
+      "script" : "project_title.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "Project.title",
+      "identifier" : "script3"
+    },
+    {
+      "script" : "project_looking_for.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "Project.looking_for",
+      "identifier" : "script4"
+    },
+    {
+      "script" : "project_image.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "Project.image",
+      "identifier" : "script5"
+    },
+
+  ],
+
+  "menu": {
+    "items": [
+      {
+        "title": "Company",
+        "items": [
+          "script1",
+        ],
+      },
+
+      {
+        "title": "Project",
+        "items": [
+          "script3", "script4", "script5"
+        ],
+      },
+
+      {
+        "title": "User",
+        "items": [
+          "script2"
+        ],
+      }
+    ],
+  },
+
+  "identifier" : "com.example.sketch.author",
+  "version" : "1.0",
+  "description" : "Generate ActiveRecord for Wantedly Visit",
+  "authorEmail" : "usa@wantedly.com",
+  "name" : "Wantedly Data Generator"
+}
