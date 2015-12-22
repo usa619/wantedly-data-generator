@@ -40,8 +40,15 @@
       "script" : "company_image.cocoascript",
       "handler" : "onRun",
       "shortcut" : "",
-      "name" : "Company.image",
+      "name" : "Company.avatar",
       "identifier" : "script6"
+    },
+    {
+      "script" : "user_image.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "User.avatar",
+      "identifier" : "script7"
     },
 
   ],
@@ -65,7 +72,7 @@
       {
         "title": "User",
         "items": [
-          "script2"
+          "script2","script7"
         ],
       }
     ],
