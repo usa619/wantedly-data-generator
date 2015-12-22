@@ -1,6 +1,6 @@
-## Wantedly Data Generator
+# Wantedly Data Generator for Sketch.app
 
-### Getting Started
+## Getting Started
 1. Download Zip and Extract it to a folder
 2. In Sketch app `Plugins > Manage Plugins...`
 3. In the Preferences window, click on the cog-wheel icon, and select `Show Plugins Folder` from the dropdown.
