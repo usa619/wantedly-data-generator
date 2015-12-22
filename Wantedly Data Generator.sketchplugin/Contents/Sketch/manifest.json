@@ -36,6 +36,13 @@
       "name" : "Project.image",
       "identifier" : "script5"
     },
+    {
+      "script" : "company_image.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "Company.image",
+      "identifier" : "script6"
+    },
 
   ],
 
@@ -44,7 +51,7 @@
       {
         "title": "Company",
         "items": [
-          "script1",
+          "script1", "script6"
         ],
       },
 
