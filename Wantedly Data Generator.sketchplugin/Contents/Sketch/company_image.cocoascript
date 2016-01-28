@@ -32,7 +32,7 @@ var onRun = function(context) {
       var fill = layer.style().fills().firstObject();
       fill.setFillType(4);
       var coll = layer.style().fills().firstObject().documentData().images();
-      [fill setPatternImage:image collection:coll]
+      layer.style().fills().firstObject().setPatternImage( newImage );
       layer.style().fills().firstObject().setPatternFillType(1);
     }
   }
